@@ -1,0 +1,355 @@
+@layer base {
+    /* defaults; JS overwrites with the real header height */
+    :root {
+        --header-h: 80px;
+        --tools-h: 0px;
+        --safe-top: 60px;
+    }
+    @media (max-width: 1023.98px) {
+        :root {
+            --header-h: 64px;
+            --safe-top: 48px;
+        }
+    }
+    @media (max-width: 767.98px) {
+        :root {
+            --header-h: 56px;
+            --safe-top: 44px;
+        }
+    }
+
+    /* Safe top padding only for the new landing */
+    #landing-main.pt-safe {
+        /* gunakan safe top yang dihitung runtime (header + tools) */
+        padding-top: var(--safe-top, calc(var(--header-h, 60px) - 20px));
+        scroll-margin-top: var(--safe-top, var(--header-h, 60px));
+    }
+
+    /* Kill any sticky inside landing content if someone adds it */
+    #landing-root .sticky {
+        position: static !important;
+        top: auto !important;
+    }
+
+    /* Prevent margin-collapsing on the first section */
+    #landing-main > section:first-child {
+        margin-top: 0 !important;
+        padding-top: clamp(0rem, 0.5vh, 0.5rem);
+    }
+
+    /* Stabilkan tinggi header mobile */
+    #site-header .tools-row {
+        min-height: 44px;
+        overflow-x: auto;
+        overflow-y: visible;
+    }
+    @media (min-width: 640px) {
+        #site-header .tools-row {
+            min-height: 48px;
+        }
+    }
+}
+
+@layer utilities {
+    .min-h-safe {
+        min-height: calc(100dvh - var(--header-h));
+    }
+    .container-app {
+        @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .btn-xs {
+        @apply inline-flex items-center justify-center rounded-xl px-3 py-1.5 text-xs font-medium;
+    }
+    .hero-grid {
+        @apply grid items-center gap-8 md:gap-12 lg:grid-cols-2;
+    }
+
+    /* CTA helpers (mobile stack, desktop row) */
+    .cta-row {
+        @apply flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4;
+    }
+    .btn-base {
+        @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-2.5 text-sm font-medium;
+    }
+    .btn-full {
+        @apply w-full sm:w-auto justify-center;
+    }
+}
+
+/* === Translate dropdown visible + di atas overlay === */
+[data-language-switcher] {
+    position: relative;
+    z-index: 60;
+    overflow: visible;
+}
+[data-language-menu].language-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    z-index: 60;
+}
+
+/* tools row jangan memotong dropdown */
+.tools-row {
+    overflow: visible !important;
+}
+
+/* === MOBILE (<=767px): rapikan gap atas === */
+@media (max-width: 767.98px) {
+    /* padding top main lebih kecil: tepat di bawah header */
+    #landing-main.pt-safe {
+        padding-top: 0 !important;
+        scroll-margin-top: var(--header-h, 60px) !important;
+    }
+    /* beri jarak antara tools cluster dan tombol auth */
+    #site-header .tools-row {
+        gap: 0.75rem !important;
+        justify-content: center !important;
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+        flex-wrap: wrap;
+        row-gap: 0.75rem;
+    }
+    #site-header .tools-row .tools-cluster {
+        width: 100%;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-right: 0;
+        flex-wrap: wrap;
+    }
+    #site-header .tools-row .theme-toggle {
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+    #site-header .tools-row .theme-toggle__button {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+    #site-header .tools-row .theme-toggle__button svg {
+        width: 0.9rem;
+        height: 0.9rem;
+    }
+    #site-header .tools-row .tools-cluster .language-button {
+        padding: 0.4rem 0.75rem 0.35rem;
+        font-size: 0.7rem;
+        gap: 0.4rem;
+        margin-left: 0;
+    }
+    #site-header .tools-row .tools-cluster [data-language-menu].language-menu {
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%);
+        max-width: min(280px, calc(100vw - 2.5rem));
+        width: max-content;
+    }
+    #site-header .tools-row .tools-cluster .language-button svg {
+        width: 0.85rem;
+        height: 0.85rem;
+    }
+    #site-header .tools-row .tools-cluster .language-code {
+        font-size: 0.68rem;
+    }
+    #site-header .tools-row > .flex.shrink-0 {
+        flex-basis: 100%;
+        justify-content: center;
+        gap: 0.75rem;
+        padding-right: 0;
+        margin-left: 0;
+    }
+    #site-header .tools-row > .flex.shrink-0 a {
+        flex: 1 1 120px;
+        max-width: 160px;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    [data-mobile-nav-menu] {
+        opacity: 0;
+        transform: translateY(-10px) scale(0.98);
+        transform-origin: top center;
+        transition: opacity 220ms ease, transform 220ms ease;
+        visibility: hidden;
+        pointer-events: none;
+    }
+    [data-mobile-nav-menu].mobile-menu--visible {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        visibility: visible;
+        pointer-events: auto;
+    }
+    /* section pertama tanpa padding atas berlebih */
+    #landing-main > section:first-child {
+        padding-top: 0 !important;
+    }
+    /* pastikan hero mepet ke atas */
+    #hero {
+        padding-top: 0 !important;
+    }
+}
+
+/* === SMALL PHONES (<=479px): ekstra padat agar tidak overflow === */
+@media (max-width: 479.98px) {
+    #site-header .tools-row {
+        gap: 0.6rem !important;
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+    #site-header .tools-row .tools-cluster {
+        gap: 0.4rem;
+    }
+    #site-header .tools-row .theme-toggle {
+        padding: 0.4rem;
+        gap: 0.35rem;
+    }
+    #site-header .tools-row .theme-toggle__button {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    #site-header .tools-row .theme-toggle__button svg {
+        width: 0.75rem;
+        height: 0.75rem;
+    }
+    #site-header .tools-row .tools-cluster .language-button {
+        padding: 0.35rem 0.6rem 0.3rem;
+        font-size: 0.65rem;
+    }
+    #site-header .tools-row .tools-cluster [data-language-menu].language-menu {
+        max-width: min(220px, calc(100vw - 1.5rem));
+    }
+    #site-header .tools-row > .flex.shrink-0 {
+        gap: 0.5rem;
+    }
+    #site-header .tools-row > .flex.shrink-0 a {
+        flex: 1 1 92px;
+        max-width: 140px;
+        padding-inline: 0.85rem;
+    }
+
+    [data-hero] {
+        padding-top: clamp(1.5rem, 7vw, 2.25rem) !important;
+        padding-bottom: clamp(2rem, 8vw, 3rem) !important;
+    }
+    [data-hero] h1 {
+        font-size: clamp(1.75rem, 7vw, 2.3rem) !important;
+        line-height: 1.15;
+    }
+    [data-hero] p {
+        font-size: clamp(0.95rem, 4.2vw, 1.05rem);
+    }
+    [data-hero] .cta-row {
+        gap: 0.75rem;
+    }
+    [data-hero] .cta-row a {
+        width: 100%;
+    }
+    [data-slider-track],
+    [data-slider-root] .min-h-safe {
+        min-height: clamp(240px, 68vh, 320px) !important;
+    }
+
+    #landing-main section > .mx-auto {
+        padding-left: clamp(0.75rem, 4vw, 1.25rem);
+        padding-right: clamp(0.75rem, 4vw, 1.25rem);
+    }
+}
+
+/* === PHONES (480-767px): ruang lebih lega === */
+@media (min-width: 480px) and (max-width: 767.98px) {
+    #site-header .tools-row {
+        gap: 0.9rem !important;
+    }
+    #site-header .tools-row .tools-cluster {
+        justify-content: center;
+    }
+    #site-header .tools-row .tools-cluster [data-language-menu].language-menu {
+        max-width: min(320px, calc(100vw - 3rem));
+    }
+    #site-header .tools-row > .flex.shrink-0 a {
+        flex: 0 1 150px;
+        max-width: 180px;
+    }
+
+    [data-hero] {
+        padding-top: clamp(2rem, 6vw, 3rem) !important;
+        padding-bottom: clamp(2.5rem, 8vw, 3.5rem) !important;
+    }
+    [data-hero] h1 {
+        font-size: clamp(2.1rem, 6vw, 2.9rem) !important;
+    }
+    [data-slider-track],
+    [data-slider-root] .min-h-safe {
+        min-height: clamp(280px, 60vh, 360px) !important;
+    }
+}
+
+/* === TABLET (768-1023px): kecilkan ruang kosong di bawah hero/slider === */
+@media (min-width: 768px) and (max-width: 1023.98px) {
+    #landing-main.pt-safe {
+        padding-top: calc(var(--header-h, 60px) - 12px) !important;
+        scroll-margin-top: calc(var(--header-h, 60px) - 12px) !important;
+    }
+    /* kurangi padding bawah hero */
+    #hero {
+        padding-bottom: clamp(0.75rem, 2vh, 1.25rem) !important;
+    }
+    /* minimum tinggi slider lebih rendah */
+    #hero .min-h-safe {
+        min-height: clamp(260px, 40vh, 420px) !important;
+    }
+    /* rapikan jarak bawah wrapper slider */
+    #hero .slider-wrapper {
+        margin-bottom: clamp(8px, 1.5vh, 16px) !important;
+    }
+}
+
+/* === SMALL DESKTOPS (1024-1439px): optimalkan jarak konten === */
+@media (min-width: 1024px) and (max-width: 1439.98px) {
+    [data-hero] {
+        padding-top: clamp(3rem, 5vw, 4rem) !important;
+        padding-bottom: clamp(3rem, 5vw, 4rem) !important;
+    }
+    [data-hero] > .mx-auto {
+        gap: clamp(3rem, 4.5vw, 5rem);
+    }
+    [data-slider-track] {
+        min-height: clamp(340px, 42vh, 460px) !important;
+    }
+    .hero-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: clamp(2.5rem, 4vw, 3.5rem);
+    }
+    #landing-main section > .mx-auto {
+        max-width: min(78rem, calc(100vw - 5rem));
+    }
+}
+
+/* === LARGE DESKTOPS (>=1440px): gunakan ruang ekstra === */
+@media (min-width: 1440px) {
+    .container-app {
+        max-width: min(88rem, calc(100vw - 8rem));
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+    [data-hero] {
+        padding-top: 5rem !important;
+        padding-bottom: 5rem !important;
+    }
+    [data-hero] > .mx-auto {
+        gap: clamp(4rem, 4vw, 5rem);
+    }
+    [data-slider-track] {
+        min-height: clamp(380px, 40vh, 520px) !important;
+    }
+    #landing-main section > .mx-auto {
+        max-width: min(90rem, calc(100vw - 8rem));
+    }
+    #landing-main section {
+        scroll-margin-top: var(--safe-top, var(--header-h, 60px));
+    }
+}
