@@ -1,0 +1,18 @@
+[
+    {
+        "input": "tolong cek tagia kebersian bulan ini",
+        "expected": ["tagihan", "kebersihan"]
+    },
+    {
+        "input": "cari wargaa bernama budi setiawan dong",
+        "expected": ["warga", "bernama"]
+    },
+    {
+        "input": "laporan kass rt minggu ini",
+        "expected": ["laporan", "kas"]
+    },
+    {
+        "input": "jadwal agnda besokk malam",
+        "expected": ["agenda", "besok"]
+    }
+]

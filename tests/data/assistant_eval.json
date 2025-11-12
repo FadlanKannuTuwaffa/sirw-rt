@@ -1,0 +1,35 @@
+[
+    {
+        "question": "Apa saja tagihan aktif yang belum saya bayar bulan ini?",
+        "expected_intent": "bills",
+        "notes": "Requires authenticated user data"
+    },
+    {
+        "question": "Rekap keuangan bulan ini dong",
+        "expected_intent": "finance"
+    },
+    {
+        "question": "Agenda minggu depan apa saja?",
+        "expected_intent": "agenda"
+    },
+    {
+        "question": "Tolong sebutkan warga baru bulan ini",
+        "expected_intent": "residents_new"
+    },
+    {
+        "question": "Bagaimana prosedur surat domisili?",
+        "expected_intent": "knowledge_base"
+    },
+    {
+        "question": "Riwayat pembayaran saya bulan ini apa?",
+        "expected_intent": "payments"
+    },
+    {
+        "question": "Cari kontak warga bernama Budi",
+        "expected_intent": "residents"
+    },
+    {
+        "question": "Apakah ada tagihan kebersihan yang sudah jatuh tempo?",
+        "expected_intent": "bills"
+    }
+]

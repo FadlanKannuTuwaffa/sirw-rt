@@ -1,0 +1,48 @@
+[
+    {
+        "name": "Ringkasan tagihan & follow-up",
+        "description": "Mengukur kemampuan reasoning saat user meminta detail lanjutan tentang tagihan yang sama.",
+        "steps": [
+            {
+                "prompt": "Tagihan apa saja bulan ini?",
+                "expects": {
+                    "intent": "bills",
+                    "contains": [
+                        "Tagihan",
+                        "Total"
+                    ],
+                    "min_confidence": 0.5
+                }
+            },
+            {
+                "prompt": "Yang sudah lunas mana?",
+                "expects": {
+                    "contains": [
+                        "lunas"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "name": "Agenda + follow-up lokasi",
+        "description": "Memeriksa apakah DummyClient mengingat jawaban sebelumnya saat ditanya lokasi/jam agenda.",
+        "steps": [
+            {
+                "prompt": "Agenda minggu ini apa saja?",
+                "expects": {
+                    "intent": "agenda"
+                }
+            },
+            {
+                "prompt": "Yang di balai warga jam berapa?",
+                "expects": {
+                    "contains": [
+                        "balai",
+                        "jam"
+                    ]
+                }
+            }
+        ]
+    }
+]

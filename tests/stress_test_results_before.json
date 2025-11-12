@@ -1,0 +1,196 @@
+{
+    "timestamp": "2025-11-05 20:28:34",
+    "total": 28,
+    "passed": 21,
+    "score": 75,
+    "details": {
+        "reasoning": [
+            {
+                "input": "Aku mau bayar tagihan yang paling urgent",
+                "expect": "Identifikasi tagihan terdekat jatuh tempo",
+                "output": "Untuk cek tagihan, kamu harus login dulu ya! \ud83d\udd10",
+                "passed": true
+            },
+            {
+                "input": "Tagihan mana yang harus aku prioritaskan?",
+                "expect": "Urutkan berdasarkan urgency",
+                "output": "Untuk cek tagihan, kamu harus login dulu ya! \ud83d\udd10",
+                "passed": true
+            },
+            {
+                "input": "Aku punya budget 500rb, tagihan mana yang bisa aku bayar?",
+                "expect": "Filter tagihan <= 500rb",
+                "output": "Untuk cek tagihan, kamu harus login dulu ya! \ud83d\udd10",
+                "passed": true
+            }
+        ],
+        "implicit_context": [
+            {
+                "input": "Kemarin aku sudah transfer, kok belum masuk?",
+                "expect": "Pahami transfer = pembayaran pending",
+                "output": "Hmm, aku belum bisa jawab itu. Coba tanya admin RT atau tanyakan hal lain seperti tagihan, agenda, kontak pengurus, atau info warga.",
+                "passed": false
+            },
+            {
+                "input": "Uang bulanan bulan ini berapa?",
+                "expect": "Pahami uang bulanan = iuran\/tagihan",
+                "output": "Laporan kas dan keuangan RT bisa kamu lihat di menu **Laporan**. Update dilakukan secara berkala biar transparan.",
+                "passed": false
+            },
+            {
+                "input": "Aku lupa bayar bulan lalu",
+                "expect": "Cek tunggakan bulan lalu",
+                "output": "Untuk cek tagihan, kamu harus login dulu ya! \ud83d\udd10",
+                "passed": true
+            }
+        ],
+        "comparison": [
+            {
+                "input": "Tagihan bulan ini lebih mahal dari bulan lalu?",
+                "expect": "Bandingkan total tagihan 2 bulan",
+                "output": "Untuk cek tagihan, kamu harus login dulu ya! \ud83d\udd10",
+                "passed": true
+            },
+            {
+                "input": "Aku bayar lebih banyak atau lebih sedikit dari bulan kemarin?",
+                "expect": "Komparasi pembayaran",
+                "output": "Untuk cek tagihan, kamu harus login dulu ya! \ud83d\udd10",
+                "passed": true
+            },
+            {
+                "input": "Siapa yang paling banyak tunggakan?",
+                "expect": "Ranking tunggakan (jika admin)",
+                "output": "Untuk cek tagihan, kamu harus login dulu ya! \ud83d\udd10",
+                "passed": true
+            }
+        ],
+        "entity_extraction": [
+            {
+                "input": "Cari warga yang tinggal di Jalan Mawar nomor 5",
+                "expect": "Parse alamat lengkap",
+                "output": "Mau cari warga siapa? Coba tulis: \"Cari warga bernama [nama]\" atau buka menu **Direktori**.",
+                "passed": true
+            },
+            {
+                "input": "Ada agenda tanggal 25 Desember?",
+                "expect": "Parse tanggal spesifik",
+                "output": "Belum ada agenda 30 hari ke depan. Santai dulu ya, nanti kalau ada kegiatan baru aku kabari!",
+                "passed": true
+            },
+            {
+                "input": "Tagihan listrik bulan Januari berapa?",
+                "expect": "Parse jenis tagihan + bulan",
+                "output": "Untuk cek tagihan, kamu harus login dulu ya! \ud83d\udd10",
+                "passed": true
+            }
+        ],
+        "ambiguity": [
+            {
+                "input": "Bayar",
+                "expect": "Tanya: \"Bayar tagihan yang mana?\"",
+                "output": "Untuk cek tagihan, kamu harus login dulu ya! \ud83d\udd10",
+                "passed": true
+            },
+            {
+                "input": "Agenda",
+                "expect": "Tanya: \"Agenda kapan? Hari ini\/besok\/minggu ini?\"",
+                "output": "Belum ada agenda 30 hari ke depan. Santai dulu ya, nanti kalau ada kegiatan baru aku kabari!",
+                "passed": true
+            },
+            {
+                "input": "Cari warga",
+                "expect": "Tanya: \"Cari warga siapa?\"",
+                "output": "Mau cari warga siapa? Coba tulis: \"Cari warga bernama [nama]\" atau buka menu **Direktori**.",
+                "passed": true
+            }
+        ],
+        "multi_intent": [
+            {
+                "input": "Tagihan aku berapa dan agenda besok apa?",
+                "expect": "Jawab 2 pertanyaan sekaligus",
+                "output": "Untuk cek tagihan, kamu harus login dulu ya! \ud83d\udd10",
+                "passed": true
+            },
+            {
+                "input": "Cek tunggakan aku dan kasih tau cara bayar",
+                "expect": "Tampilkan tagihan + metode bayar",
+                "output": "Kamu bisa bayar melalui transfer bank, setor langsung ke bendahara, atau payment gateway. Detail lengkap ada di menu **Tagihan**.",
+                "passed": true
+            },
+            {
+                "input": "Siapa ketua RT dan nomornya berapa?",
+                "expect": "Info ketua + kontak",
+                "output": "Untuk cek tagihan, kamu harus login dulu ya! \ud83d\udd10",
+                "passed": true
+            }
+        ],
+        "proactive": [
+            {
+                "input": "Halo",
+                "expect": "Cek tagihan jatuh tempo & beri notif proaktif",
+                "output": "Hai! \ud83d\udc4b Ada yang bisa aku bantu hari ini?",
+                "passed": false
+            },
+            {
+                "input": "Ada info penting?",
+                "expect": "Rangkum: tagihan urgent + agenda terdekat",
+                "output": "Hmm, aku belum bisa jawab itu. Coba tanya admin RT atau tanyakan hal lain seperti tagihan, agenda, kontak pengurus, atau info warga.",
+                "passed": false
+            }
+        ],
+        "negation": [
+            {
+                "input": "Bukan itu, aku tanya agenda besok",
+                "expect": "Koreksi topik ke agenda besok",
+                "output": "Belum ada agenda besok. Santai dulu ya, nanti kalau ada kegiatan baru aku kabari!",
+                "passed": true
+            },
+            {
+                "input": "Salah, maksud aku pembayaran bukan tagihan",
+                "expect": "Switch dari bills ke payments",
+                "output": "Untuk cek tagihan, kamu harus login dulu ya! \ud83d\udd10",
+                "passed": true
+            }
+        ],
+        "temporal": [
+            {
+                "input": "Tagihan 3 bulan terakhir",
+                "expect": "Filter tagihan 3 bulan",
+                "output": "Untuk cek tagihan, kamu harus login dulu ya! \ud83d\udd10",
+                "passed": true
+            },
+            {
+                "input": "Agenda minggu depan",
+                "expect": "Agenda next week (bukan this week)",
+                "output": "Belum ada agenda 30 hari ke depan. Santai dulu ya, nanti kalau ada kegiatan baru aku kabari!",
+                "passed": true
+            },
+            {
+                "input": "Pembayaran tahun ini",
+                "expect": "Filter pembayaran year-to-date",
+                "output": "Untuk cek tagihan, kamu harus login dulu ya! \ud83d\udd10",
+                "passed": true
+            }
+        ],
+        "dynamic_synonym": [
+            {
+                "input": "Uang kas RT",
+                "expect": "Pahami = iuran\/tagihan",
+                "output": "Laporan kas dan keuangan RT bisa kamu lihat di menu **Laporan**. Update dilakukan secara berkala biar transparan.",
+                "passed": false
+            },
+            {
+                "input": "Duit sampah",
+                "expect": "Pahami = tagihan sampah",
+                "output": "Jadwal pengambilan sampah biasanya 2-3x seminggu tergantung area. Cek pengumuman di dashboard atau tanyakan ke ketua RT. Harap pisahkan sampah organik dan anorganik.\n\nSumber: Knowledge Base RT (keyakinan 100%).",
+                "passed": false
+            },
+            {
+                "input": "Kumpul warga",
+                "expect": "Pahami = agenda\/rapat",
+                "output": "Hai! Ada yang bisa kubantu? Coba tanya tentang tagihan, agenda, info warga, atau prosedur RT ya.",
+                "passed": false
+            }
+        ]
+    }
+}

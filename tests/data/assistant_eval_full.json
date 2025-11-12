@@ -1,0 +1,1719 @@
+[
+  {
+    "id": "BILLS_001",
+    "question": "Apa saja tagihan bulan ini yang belum lunas?",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "current_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_002",
+    "question": "Apa saja tagihan bulan lalu yang belum lunas?",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "previous_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_003",
+    "question": "Apa saja tagihan bulan depan yang belum lunas?",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "next_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_004",
+    "question": "Daftar tunggakan bulan ini dong",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "current_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_005",
+    "question": "Daftar tunggakan bulan lalu dong",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "previous_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_006",
+    "question": "Daftar tunggakan bulan depan dong",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "next_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_007",
+    "question": "Tagihan bulan ini apa yang harus kubayar?",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "current_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_008",
+    "question": "Tagihan bulan lalu apa yang harus kubayar?",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "previous_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_009",
+    "question": "Tagihan bulan depan apa yang harus kubayar?",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "next_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_010",
+    "question": "Ada tagihan kebersihan bulan ini yang belum dibayar?",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "current_month",
+      "include": "kebersihan"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_011",
+    "question": "Ada tagihan keamanan bulan ini yang belum dibayar?",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "current_month",
+      "include": "keamanan"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_012",
+    "question": "Ada tagihan kas bulan ini yang belum dibayar?",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "current_month",
+      "include": "kas"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_013",
+    "question": "Ada tagihan sampah bulan ini yang belum dibayar?",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "current_month",
+      "include": "sampah"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_014",
+    "question": "Ada tagihan kebersihan bulan lalu yang belum dibayar?",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "previous_month",
+      "include": "kebersihan"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_015",
+    "question": "Ada tagihan keamanan bulan lalu yang belum dibayar?",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "previous_month",
+      "include": "keamanan"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_016",
+    "question": "Ada tagihan kas bulan lalu yang belum dibayar?",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "previous_month",
+      "include": "kas"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_017",
+    "question": "Ada tagihan sampah bulan lalu yang belum dibayar?",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "previous_month",
+      "include": "sampah"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_018",
+    "question": "Ada tagihan kebersihan bulan depan yang belum dibayar?",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "next_month",
+      "include": "kebersihan"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_019",
+    "question": "Ada tagihan keamanan bulan depan yang belum dibayar?",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "next_month",
+      "include": "keamanan"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_020",
+    "question": "Ada tagihan kas bulan depan yang belum dibayar?",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "next_month",
+      "include": "kas"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_021",
+    "question": "Ada tagihan sampah bulan depan yang belum dibayar?",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "next_month",
+      "include": "sampah"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_022",
+    "question": "Cek iuran kebersihan bulan ini ya",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "current_month",
+      "include": "kebersihan"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_023",
+    "question": "Cek iuran keamanan bulan ini ya",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "current_month",
+      "include": "keamanan"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_024",
+    "question": "Cek iuran kas bulan ini ya",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "current_month",
+      "include": "kas"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_025",
+    "question": "Cek iuran sampah bulan ini ya",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "current_month",
+      "include": "sampah"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_026",
+    "question": "Cek iuran kebersihan bulan lalu ya",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "previous_month",
+      "include": "kebersihan"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_027",
+    "question": "Cek iuran keamanan bulan lalu ya",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "previous_month",
+      "include": "keamanan"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_028",
+    "question": "Cek iuran kas bulan lalu ya",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "previous_month",
+      "include": "kas"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_029",
+    "question": "Cek iuran sampah bulan lalu ya",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "previous_month",
+      "include": "sampah"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_030",
+    "question": "Cek iuran kebersihan bulan depan ya",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "next_month",
+      "include": "kebersihan"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_031",
+    "question": "Cek iuran keamanan bulan depan ya",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "next_month",
+      "include": "keamanan"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_032",
+    "question": "Cek iuran kas bulan depan ya",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "next_month",
+      "include": "kas"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_033",
+    "question": "Cek iuran sampah bulan depan ya",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "next_month",
+      "include": "sampah"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "PAY_034",
+    "question": "Riwayat pembayaran bulan ini apa aja?",
+    "expected_intent": "payments",
+    "expected_slots": {
+      "period": "current_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "payments"
+  },
+  {
+    "id": "PAY_035",
+    "question": "Riwayat pembayaran bulan lalu apa aja?",
+    "expected_intent": "payments",
+    "expected_slots": {
+      "period": "previous_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "payments"
+  },
+  {
+    "id": "PAY_036",
+    "question": "Riwayat pembayaran bulan depan apa aja?",
+    "expected_intent": "payments",
+    "expected_slots": {
+      "period": "next_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "payments"
+  },
+  {
+    "id": "PAY_037",
+    "question": "Tunjukkan pembayaran yang masuk bulan ini",
+    "expected_intent": "payments",
+    "expected_slots": {
+      "period": "current_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "payments"
+  },
+  {
+    "id": "PAY_038",
+    "question": "Tunjukkan pembayaran yang masuk bulan lalu",
+    "expected_intent": "payments",
+    "expected_slots": {
+      "period": "previous_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "payments"
+  },
+  {
+    "id": "PAY_039",
+    "question": "Tunjukkan pembayaran yang masuk bulan depan",
+    "expected_intent": "payments",
+    "expected_slots": {
+      "period": "next_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "payments"
+  },
+  {
+    "id": "PAY_040",
+    "question": "Pembayaran bulan ini mana yang lunas?",
+    "expected_intent": "payments",
+    "expected_slots": {
+      "period": "current_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "payments"
+  },
+  {
+    "id": "PAY_041",
+    "question": "Pembayaran bulan lalu mana yang lunas?",
+    "expected_intent": "payments",
+    "expected_slots": {
+      "period": "previous_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "payments"
+  },
+  {
+    "id": "PAY_042",
+    "question": "Pembayaran bulan depan mana yang lunas?",
+    "expected_intent": "payments",
+    "expected_slots": {
+      "period": "next_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "payments"
+  },
+  {
+    "id": "AGENDA_043",
+    "question": "Agenda hari ini apa saja?",
+    "expected_intent": "agenda",
+    "expected_slots": {
+      "range": "today"
+    },
+    "requires_tool": true,
+    "category": "agenda"
+  },
+  {
+    "id": "AGENDA_044",
+    "question": "Agenda besok apa saja?",
+    "expected_intent": "agenda",
+    "expected_slots": {
+      "range": "tomorrow"
+    },
+    "requires_tool": true,
+    "category": "agenda"
+  },
+  {
+    "id": "AGENDA_045",
+    "question": "Agenda minggu ini apa saja?",
+    "expected_intent": "agenda",
+    "expected_slots": {
+      "range": "week"
+    },
+    "requires_tool": true,
+    "category": "agenda"
+  },
+  {
+    "id": "AGENDA_046",
+    "question": "Agenda minggu depan apa saja?",
+    "expected_intent": "agenda",
+    "expected_slots": {
+      "range": "next_week"
+    },
+    "requires_tool": true,
+    "category": "agenda"
+  },
+  {
+    "id": "AGENDA_047",
+    "question": "Ada kegiatan hari ini?",
+    "expected_intent": "agenda",
+    "expected_slots": {
+      "range": "today"
+    },
+    "requires_tool": true,
+    "category": "agenda"
+  },
+  {
+    "id": "AGENDA_048",
+    "question": "Ada kegiatan besok?",
+    "expected_intent": "agenda",
+    "expected_slots": {
+      "range": "tomorrow"
+    },
+    "requires_tool": true,
+    "category": "agenda"
+  },
+  {
+    "id": "AGENDA_049",
+    "question": "Ada kegiatan minggu ini?",
+    "expected_intent": "agenda",
+    "expected_slots": {
+      "range": "week"
+    },
+    "requires_tool": true,
+    "category": "agenda"
+  },
+  {
+    "id": "AGENDA_050",
+    "question": "Ada kegiatan minggu depan?",
+    "expected_intent": "agenda",
+    "expected_slots": {
+      "range": "next_week"
+    },
+    "requires_tool": true,
+    "category": "agenda"
+  },
+  {
+    "id": "AGENDA_051",
+    "question": "Tolong kirim jadwal hari ini",
+    "expected_intent": "agenda",
+    "expected_slots": {
+      "range": "today"
+    },
+    "requires_tool": true,
+    "category": "agenda"
+  },
+  {
+    "id": "AGENDA_052",
+    "question": "Tolong kirim jadwal besok",
+    "expected_intent": "agenda",
+    "expected_slots": {
+      "range": "tomorrow"
+    },
+    "requires_tool": true,
+    "category": "agenda"
+  },
+  {
+    "id": "AGENDA_053",
+    "question": "Tolong kirim jadwal minggu ini",
+    "expected_intent": "agenda",
+    "expected_slots": {
+      "range": "week"
+    },
+    "requires_tool": true,
+    "category": "agenda"
+  },
+  {
+    "id": "AGENDA_054",
+    "question": "Tolong kirim jadwal minggu depan",
+    "expected_intent": "agenda",
+    "expected_slots": {
+      "range": "next_week"
+    },
+    "requires_tool": true,
+    "category": "agenda"
+  },
+  {
+    "id": "FIN_055",
+    "question": "Rekap keuangan bulan ini dong",
+    "expected_intent": "finance",
+    "expected_slots": {
+      "period": "current_month"
+    },
+    "requires_tool": true,
+    "category": "finance"
+  },
+  {
+    "id": "FIN_056",
+    "question": "Rekap keuangan bulan lalu dong",
+    "expected_intent": "finance",
+    "expected_slots": {
+      "period": "previous_month"
+    },
+    "requires_tool": true,
+    "category": "finance"
+  },
+  {
+    "id": "FIN_057",
+    "question": "Rekap keuangan bulan depan dong",
+    "expected_intent": "finance",
+    "expected_slots": {
+      "period": "next_month"
+    },
+    "requires_tool": true,
+    "category": "finance"
+  },
+  {
+    "id": "FIN_058",
+    "question": "Hitung pemasukan dan pengeluaran bulan ini",
+    "expected_intent": "finance",
+    "expected_slots": {
+      "period": "current_month"
+    },
+    "requires_tool": true,
+    "category": "finance"
+  },
+  {
+    "id": "FIN_059",
+    "question": "Hitung pemasukan dan pengeluaran bulan lalu",
+    "expected_intent": "finance",
+    "expected_slots": {
+      "period": "previous_month"
+    },
+    "requires_tool": true,
+    "category": "finance"
+  },
+  {
+    "id": "FIN_060",
+    "question": "Hitung pemasukan dan pengeluaran bulan depan",
+    "expected_intent": "finance",
+    "expected_slots": {
+      "period": "next_month"
+    },
+    "requires_tool": true,
+    "category": "finance"
+  },
+  {
+    "id": "FIN_061",
+    "question": "Status kas bulan ini gimana?",
+    "expected_intent": "finance",
+    "expected_slots": {
+      "period": "current_month"
+    },
+    "requires_tool": true,
+    "category": "finance"
+  },
+  {
+    "id": "FIN_062",
+    "question": "Status kas bulan lalu gimana?",
+    "expected_intent": "finance",
+    "expected_slots": {
+      "period": "previous_month"
+    },
+    "requires_tool": true,
+    "category": "finance"
+  },
+  {
+    "id": "FIN_063",
+    "question": "Status kas bulan depan gimana?",
+    "expected_intent": "finance",
+    "expected_slots": {
+      "period": "next_month"
+    },
+    "requires_tool": true,
+    "category": "finance"
+  },
+  {
+    "id": "KB_064",
+    "question": "Bagaimana prosedur surat domisili?",
+    "expected_intent": "knowledge_base",
+    "requires_kb": true,
+    "category": "kb"
+  },
+  {
+    "id": "KB_065",
+    "question": "Bagaimana cara pinjam balai warga?",
+    "expected_intent": "knowledge_base",
+    "requires_kb": true,
+    "category": "kb"
+  },
+  {
+    "id": "KB_066",
+    "question": "Bagaimana aturan iuran keamanan?",
+    "expected_intent": "knowledge_base",
+    "requires_kb": true,
+    "category": "kb"
+  },
+  {
+    "id": "KB_067",
+    "question": "Bagaimana jadwal pengambilan sampah?",
+    "expected_intent": "knowledge_base",
+    "requires_kb": true,
+    "category": "kb"
+  },
+  {
+    "id": "KB_068",
+    "question": "Bagaimana proses surat pindah?",
+    "expected_intent": "knowledge_base",
+    "requires_kb": true,
+    "category": "kb"
+  },
+  {
+    "id": "KB_069",
+    "question": "Bagaimana cara ajukan SKCK?",
+    "expected_intent": "knowledge_base",
+    "requires_kb": true,
+    "category": "kb"
+  },
+  {
+    "id": "KB_070",
+    "question": "Bagaimana langkah minta surat pengantar?",
+    "expected_intent": "knowledge_base",
+    "requires_kb": true,
+    "category": "kb"
+  },
+  {
+    "id": "KB_071",
+    "question": "Bagaimana panduan ronda malam?",
+    "expected_intent": "knowledge_base",
+    "requires_kb": true,
+    "category": "kb"
+  },
+  {
+    "id": "KB_072",
+    "question": "Bagaimana alur pengajuan bantuan warga?",
+    "expected_intent": "knowledge_base",
+    "requires_kb": true,
+    "category": "kb"
+  },
+  {
+    "id": "KB_073",
+    "question": "Bagaimana aturan penggunaan lapangan?",
+    "expected_intent": "knowledge_base",
+    "requires_kb": true,
+    "category": "kb"
+  },
+  {
+    "id": "RES_074",
+    "question": "Berapa total warga terdaftar sekarang?",
+    "expected_intent": "residents",
+    "category": "residents"
+  },
+  {
+    "id": "RES_075",
+    "question": "Tolong cari warga bernama Budi",
+    "expected_intent": "residents",
+    "category": "residents"
+  },
+  {
+    "id": "RES_076",
+    "question": "Siapa saja warga baru bulan ini?",
+    "expected_intent": "residents_new",
+    "category": "residents"
+  },
+  {
+    "id": "RES_077",
+    "question": "Butuh kontak pengurus keamanan",
+    "expected_intent": "residents",
+    "category": "residents"
+  },
+  {
+    "id": "RES_078",
+    "question": "Cari warga bernama Dewi blok C",
+    "expected_intent": "residents",
+    "category": "residents"
+  },
+  {
+    "id": "RES_079",
+    "question": "Ada warga bernama Andi yang belum update?",
+    "expected_intent": "residents",
+    "category": "residents"
+  },
+  {
+    "id": "MULTI_001",
+    "question": "Aku butuh agenda minggu ini dan tagihan kebersihan yang belum lunas",
+    "expected_intent": "multi_intent",
+    "multi_intent_targets": [
+      "agenda",
+      "bills"
+    ]
+  },
+  {
+    "id": "MULTI_002",
+    "question": "Tolong kirim ringkasan pembayaran bulan ini sekaligus daftar warga baru",
+    "expected_intent": "multi_intent",
+    "multi_intent_targets": [
+      "payments",
+      "residents_new"
+    ]
+  },
+  {
+    "id": "MULTI_003",
+    "question": "Agenda minggu depan dan status kas sekarang apa?",
+    "expected_intent": "multi_intent",
+    "multi_intent_targets": [
+      "agenda",
+      "finance"
+    ]
+  },
+  {
+    "id": "MULTI_004",
+    "question": "Cek tagihan kebersihan dan pembayaran yang sudah lunas bulan ini",
+    "expected_intent": "multi_intent",
+    "multi_intent_targets": [
+      "bills",
+      "payments"
+    ]
+  },
+  {
+    "id": "RETRY_001",
+    "question": "Cek tagihan listrik dong",
+    "follow_up": "Eh maksudku tagihan kebersihan ya",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "include": "listrik"
+    },
+    "expected_intent_after_follow_up": "bills",
+    "expected_slots_after_follow_up": {
+      "include": "kebersihan"
+    },
+    "category": "retry"
+  },
+  {
+    "id": "RETRY_002",
+    "question": "Cari warga bernama Dewi",
+    "follow_up": "Maaf, ganti jadi Dwi ya",
+    "expected_intent": "residents",
+    "expected_intent_after_follow_up": "residents",
+    "category": "retry"
+  },
+  {
+    "id": "NEG_001",
+    "question": "Aku tidak mau info tagihan keamanan, cukup yang kebersihan saja",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "include": "kebersihan",
+      "exclude": "keamanan"
+    },
+    "category": "negation"
+  },
+  {
+    "id": "NEG_002",
+    "question": "Jangan tampilkan agenda minggu ini, cek minggu depan aja",
+    "expected_intent": "agenda",
+    "expected_slots": {
+      "range": "next_week"
+    },
+    "category": "negation"
+  },
+  {
+    "id": "BILLS_001_VAR",
+    "question": "Apa saja tagihan bulan ini yang belum lunas? dong",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "current_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_002_VAR",
+    "question": "Apa saja tagihan bulan lalu yang belum lunas? ya",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "previous_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_003_VAR",
+    "question": "Apa saja tagihan bulan depan yang belum lunas? pls",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "next_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_004_VAR",
+    "question": "Daftar tunggakan bulan ini dong nih",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "current_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_005_VAR",
+    "question": "Daftar tunggakan bulan lalu dong tolong dong",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "previous_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_006_VAR",
+    "question": "Daftar tunggakan bulan depan dong bang",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "next_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_007_VAR",
+    "question": "Tagihan bulan ini apa yang harus kubayar? dong",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "current_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_008_VAR",
+    "question": "Tagihan bulan lalu apa yang harus kubayar? ya",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "previous_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_009_VAR",
+    "question": "Tagihan bulan depan apa yang harus kubayar? pls",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "next_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_010_VAR",
+    "question": "Ada tagihan kebersihan bulan ini yang belum dibayar? nih",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "current_month",
+      "include": "kebersihan"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_011_VAR",
+    "question": "Ada tagihan keamanan bulan ini yang belum dibayar? tolong dong",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "current_month",
+      "include": "keamanan"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_012_VAR",
+    "question": "Ada tagihan kas bulan ini yang belum dibayar? bang",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "current_month",
+      "include": "kas"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_013_VAR",
+    "question": "Ada tagihan sampah bulan ini yang belum dibayar? dong",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "current_month",
+      "include": "sampah"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_014_VAR",
+    "question": "Ada tagihan kebersihan bulan lalu yang belum dibayar? ya",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "previous_month",
+      "include": "kebersihan"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_015_VAR",
+    "question": "Ada tagihan keamanan bulan lalu yang belum dibayar? pls",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "previous_month",
+      "include": "keamanan"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_016_VAR",
+    "question": "Ada tagihan kas bulan lalu yang belum dibayar? nih",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "previous_month",
+      "include": "kas"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_017_VAR",
+    "question": "Ada tagihan sampah bulan lalu yang belum dibayar? tolong dong",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "previous_month",
+      "include": "sampah"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_018_VAR",
+    "question": "Ada tagihan kebersihan bulan depan yang belum dibayar? bang",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "next_month",
+      "include": "kebersihan"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_019_VAR",
+    "question": "Ada tagihan keamanan bulan depan yang belum dibayar? dong",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "next_month",
+      "include": "keamanan"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_020_VAR",
+    "question": "Ada tagihan kas bulan depan yang belum dibayar? ya",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "next_month",
+      "include": "kas"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_021_VAR",
+    "question": "Ada tagihan sampah bulan depan yang belum dibayar? pls",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "next_month",
+      "include": "sampah"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_022_VAR",
+    "question": "Cek iuran kebersihan bulan ini ya nih",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "current_month",
+      "include": "kebersihan"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_023_VAR",
+    "question": "Cek iuran keamanan bulan ini ya tolong dong",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "current_month",
+      "include": "keamanan"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_024_VAR",
+    "question": "Cek iuran kas bulan ini ya bang",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "current_month",
+      "include": "kas"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_025_VAR",
+    "question": "Cek iuran sampah bulan ini ya dong",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "current_month",
+      "include": "sampah"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_026_VAR",
+    "question": "Cek iuran kebersihan bulan lalu ya ya",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "previous_month",
+      "include": "kebersihan"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_027_VAR",
+    "question": "Cek iuran keamanan bulan lalu ya pls",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "previous_month",
+      "include": "keamanan"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_028_VAR",
+    "question": "Cek iuran kas bulan lalu ya nih",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "previous_month",
+      "include": "kas"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_029_VAR",
+    "question": "Cek iuran sampah bulan lalu ya tolong dong",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "previous_month",
+      "include": "sampah"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_030_VAR",
+    "question": "Cek iuran kebersihan bulan depan ya bang",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "next_month",
+      "include": "kebersihan"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_031_VAR",
+    "question": "Cek iuran keamanan bulan depan ya dong",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "next_month",
+      "include": "keamanan"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_032_VAR",
+    "question": "Cek iuran kas bulan depan ya ya",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "next_month",
+      "include": "kas"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "BILLS_033_VAR",
+    "question": "Cek iuran sampah bulan depan ya pls",
+    "expected_intent": "bills",
+    "expected_slots": {
+      "period": "next_month",
+      "include": "sampah"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "bills"
+  },
+  {
+    "id": "PAY_034_VAR",
+    "question": "Riwayat pembayaran bulan ini apa aja? nih",
+    "expected_intent": "payments",
+    "expected_slots": {
+      "period": "current_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "payments"
+  },
+  {
+    "id": "PAY_035_VAR",
+    "question": "Riwayat pembayaran bulan lalu apa aja? tolong dong",
+    "expected_intent": "payments",
+    "expected_slots": {
+      "period": "previous_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "payments"
+  },
+  {
+    "id": "PAY_036_VAR",
+    "question": "Riwayat pembayaran bulan depan apa aja? bang",
+    "expected_intent": "payments",
+    "expected_slots": {
+      "period": "next_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "payments"
+  },
+  {
+    "id": "PAY_037_VAR",
+    "question": "Tunjukkan pembayaran yang masuk bulan ini dong",
+    "expected_intent": "payments",
+    "expected_slots": {
+      "period": "current_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "payments"
+  },
+  {
+    "id": "PAY_038_VAR",
+    "question": "Tunjukkan pembayaran yang masuk bulan lalu ya",
+    "expected_intent": "payments",
+    "expected_slots": {
+      "period": "previous_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "payments"
+  },
+  {
+    "id": "PAY_039_VAR",
+    "question": "Tunjukkan pembayaran yang masuk bulan depan pls",
+    "expected_intent": "payments",
+    "expected_slots": {
+      "period": "next_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "payments"
+  },
+  {
+    "id": "PAY_040_VAR",
+    "question": "Pembayaran bulan ini mana yang lunas? nih",
+    "expected_intent": "payments",
+    "expected_slots": {
+      "period": "current_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "payments"
+  },
+  {
+    "id": "PAY_041_VAR",
+    "question": "Pembayaran bulan lalu mana yang lunas? tolong dong",
+    "expected_intent": "payments",
+    "expected_slots": {
+      "period": "previous_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "payments"
+  },
+  {
+    "id": "PAY_042_VAR",
+    "question": "Pembayaran bulan depan mana yang lunas? bang",
+    "expected_intent": "payments",
+    "expected_slots": {
+      "period": "next_month"
+    },
+    "requires_tool": true,
+    "requires_auth": true,
+    "category": "payments"
+  },
+  {
+    "id": "AGENDA_043_VAR",
+    "question": "Agenda hari ini apa saja? dong",
+    "expected_intent": "agenda",
+    "expected_slots": {
+      "range": "today"
+    },
+    "requires_tool": true,
+    "category": "agenda"
+  },
+  {
+    "id": "AGENDA_044_VAR",
+    "question": "Agenda besok apa saja? ya",
+    "expected_intent": "agenda",
+    "expected_slots": {
+      "range": "tomorrow"
+    },
+    "requires_tool": true,
+    "category": "agenda"
+  },
+  {
+    "id": "AGENDA_045_VAR",
+    "question": "Agenda minggu ini apa saja? pls",
+    "expected_intent": "agenda",
+    "expected_slots": {
+      "range": "week"
+    },
+    "requires_tool": true,
+    "category": "agenda"
+  },
+  {
+    "id": "AGENDA_046_VAR",
+    "question": "Agenda minggu depan apa saja? nih",
+    "expected_intent": "agenda",
+    "expected_slots": {
+      "range": "next_week"
+    },
+    "requires_tool": true,
+    "category": "agenda"
+  },
+  {
+    "id": "AGENDA_047_VAR",
+    "question": "Ada kegiatan hari ini? tolong dong",
+    "expected_intent": "agenda",
+    "expected_slots": {
+      "range": "today"
+    },
+    "requires_tool": true,
+    "category": "agenda"
+  },
+  {
+    "id": "AGENDA_048_VAR",
+    "question": "Ada kegiatan besok? bang",
+    "expected_intent": "agenda",
+    "expected_slots": {
+      "range": "tomorrow"
+    },
+    "requires_tool": true,
+    "category": "agenda"
+  },
+  {
+    "id": "AGENDA_049_VAR",
+    "question": "Ada kegiatan minggu ini? dong",
+    "expected_intent": "agenda",
+    "expected_slots": {
+      "range": "week"
+    },
+    "requires_tool": true,
+    "category": "agenda"
+  },
+  {
+    "id": "AGENDA_050_VAR",
+    "question": "Ada kegiatan minggu depan? ya",
+    "expected_intent": "agenda",
+    "expected_slots": {
+      "range": "next_week"
+    },
+    "requires_tool": true,
+    "category": "agenda"
+  },
+  {
+    "id": "AGENDA_051_VAR",
+    "question": "Tolong kirim jadwal hari ini pls",
+    "expected_intent": "agenda",
+    "expected_slots": {
+      "range": "today"
+    },
+    "requires_tool": true,
+    "category": "agenda"
+  },
+  {
+    "id": "AGENDA_052_VAR",
+    "question": "Tolong kirim jadwal besok nih",
+    "expected_intent": "agenda",
+    "expected_slots": {
+      "range": "tomorrow"
+    },
+    "requires_tool": true,
+    "category": "agenda"
+  },
+  {
+    "id": "AGENDA_053_VAR",
+    "question": "Tolong kirim jadwal minggu ini tolong dong",
+    "expected_intent": "agenda",
+    "expected_slots": {
+      "range": "week"
+    },
+    "requires_tool": true,
+    "category": "agenda"
+  },
+  {
+    "id": "AGENDA_054_VAR",
+    "question": "Tolong kirim jadwal minggu depan bang",
+    "expected_intent": "agenda",
+    "expected_slots": {
+      "range": "next_week"
+    },
+    "requires_tool": true,
+    "category": "agenda"
+  },
+  {
+    "id": "FIN_055_VAR",
+    "question": "Rekap keuangan bulan ini dong dong",
+    "expected_intent": "finance",
+    "expected_slots": {
+      "period": "current_month"
+    },
+    "requires_tool": true,
+    "category": "finance"
+  },
+  {
+    "id": "FIN_056_VAR",
+    "question": "Rekap keuangan bulan lalu dong ya",
+    "expected_intent": "finance",
+    "expected_slots": {
+      "period": "previous_month"
+    },
+    "requires_tool": true,
+    "category": "finance"
+  },
+  {
+    "id": "FIN_057_VAR",
+    "question": "Rekap keuangan bulan depan dong pls",
+    "expected_intent": "finance",
+    "expected_slots": {
+      "period": "next_month"
+    },
+    "requires_tool": true,
+    "category": "finance"
+  },
+  {
+    "id": "FIN_058_VAR",
+    "question": "Hitung pemasukan dan pengeluaran bulan ini nih",
+    "expected_intent": "finance",
+    "expected_slots": {
+      "period": "current_month"
+    },
+    "requires_tool": true,
+    "category": "finance"
+  },
+  {
+    "id": "FIN_059_VAR",
+    "question": "Hitung pemasukan dan pengeluaran bulan lalu tolong dong",
+    "expected_intent": "finance",
+    "expected_slots": {
+      "period": "previous_month"
+    },
+    "requires_tool": true,
+    "category": "finance"
+  },
+  {
+    "id": "FIN_060_VAR",
+    "question": "Hitung pemasukan dan pengeluaran bulan depan bang",
+    "expected_intent": "finance",
+    "expected_slots": {
+      "period": "next_month"
+    },
+    "requires_tool": true,
+    "category": "finance"
+  },
+  {
+    "id": "FIN_061_VAR",
+    "question": "Status kas bulan ini gimana? dong",
+    "expected_intent": "finance",
+    "expected_slots": {
+      "period": "current_month"
+    },
+    "requires_tool": true,
+    "category": "finance"
+  },
+  {
+    "id": "FIN_062_VAR",
+    "question": "Status kas bulan lalu gimana? ya",
+    "expected_intent": "finance",
+    "expected_slots": {
+      "period": "previous_month"
+    },
+    "requires_tool": true,
+    "category": "finance"
+  },
+  {
+    "id": "FIN_063_VAR",
+    "question": "Status kas bulan depan gimana? pls",
+    "expected_intent": "finance",
+    "expected_slots": {
+      "period": "next_month"
+    },
+    "requires_tool": true,
+    "category": "finance"
+  },
+  {
+    "id": "KB_064_VAR",
+    "question": "Bagaimana prosedur surat domisili? nih",
+    "expected_intent": "knowledge_base",
+    "requires_kb": true,
+    "category": "kb"
+  },
+  {
+    "id": "KB_065_VAR",
+    "question": "Bagaimana cara pinjam balai warga? tolong dong",
+    "expected_intent": "knowledge_base",
+    "requires_kb": true,
+    "category": "kb"
+  },
+  {
+    "id": "KB_066_VAR",
+    "question": "Bagaimana aturan iuran keamanan? bang",
+    "expected_intent": "knowledge_base",
+    "requires_kb": true,
+    "category": "kb"
+  },
+  {
+    "id": "KB_067_VAR",
+    "question": "Bagaimana jadwal pengambilan sampah? dong",
+    "expected_intent": "knowledge_base",
+    "requires_kb": true,
+    "category": "kb"
+  },
+  {
+    "id": "KB_068_VAR",
+    "question": "Bagaimana proses surat pindah? ya",
+    "expected_intent": "knowledge_base",
+    "requires_kb": true,
+    "category": "kb"
+  },
+  {
+    "id": "KB_069_VAR",
+    "question": "Bagaimana cara ajukan SKCK? pls",
+    "expected_intent": "knowledge_base",
+    "requires_kb": true,
+    "category": "kb"
+  },
+  {
+    "id": "KB_070_VAR",
+    "question": "Bagaimana langkah minta surat pengantar? nih",
+    "expected_intent": "knowledge_base",
+    "requires_kb": true,
+    "category": "kb"
+  },
+  {
+    "id": "KB_071_VAR",
+    "question": "Bagaimana panduan ronda malam? tolong dong",
+    "expected_intent": "knowledge_base",
+    "requires_kb": true,
+    "category": "kb"
+  },
+  {
+    "id": "KB_072_VAR",
+    "question": "Bagaimana alur pengajuan bantuan warga? bang",
+    "expected_intent": "knowledge_base",
+    "requires_kb": true,
+    "category": "kb"
+  },
+  {
+    "id": "KB_073_VAR",
+    "question": "Bagaimana aturan penggunaan lapangan? dong",
+    "expected_intent": "knowledge_base",
+    "requires_kb": true,
+    "category": "kb"
+  },
+  {
+    "id": "RES_074_VAR",
+    "question": "Berapa total warga terdaftar sekarang? ya",
+    "expected_intent": "residents",
+    "category": "residents"
+  },
+  {
+    "id": "RES_075_VAR",
+    "question": "Tolong cari warga bernama Budi pls",
+    "expected_intent": "residents",
+    "category": "residents"
+  },
+  {
+    "id": "RES_076_VAR",
+    "question": "Siapa saja warga baru bulan ini? nih",
+    "expected_intent": "residents_new",
+    "category": "residents"
+  },
+  {
+    "id": "RES_077_VAR",
+    "question": "Butuh kontak pengurus keamanan tolong dong",
+    "expected_intent": "residents",
+    "category": "residents"
+  },
+  {
+    "id": "RES_078_VAR",
+    "question": "Cari warga bernama Dewi blok C bang",
+    "expected_intent": "residents",
+    "category": "residents"
+  },
+  {
+    "id": "RES_079_VAR",
+    "question": "Ada warga bernama Andi yang belum update? dong",
+    "expected_intent": "residents",
+    "category": "residents"
+  },
+  {
+    "id": "MULTI_001_VAR",
+    "question": "Aku butuh agenda minggu ini dan tagihan kebersihan yang belum lunas ya",
+    "expected_intent": "multi_intent",
+    "multi_intent_targets": [
+      "agenda",
+      "bills"
+    ]
+  },
+  {
+    "id": "MULTI_002_VAR",
+    "question": "Tolong kirim ringkasan pembayaran bulan ini sekaligus daftar warga baru pls",
+    "expected_intent": "multi_intent",
+    "multi_intent_targets": [
+      "payments",
+      "residents_new"
+    ]
+  },
+  {
+    "id": "MULTI_003_VAR",
+    "question": "Agenda minggu depan dan status kas sekarang apa? nih",
+    "expected_intent": "multi_intent",
+    "multi_intent_targets": [
+      "agenda",
+      "finance"
+    ]
+  },
+  {
+    "id": "MULTI_004_VAR",
+    "question": "Cek tagihan kebersihan dan pembayaran yang sudah lunas bulan ini tolong dong",
+    "expected_intent": "multi_intent",
+    "multi_intent_targets": [
+      "bills",
+      "payments"
+    ]
+  }
+]
