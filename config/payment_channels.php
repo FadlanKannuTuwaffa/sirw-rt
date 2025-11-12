@@ -1,0 +1,162 @@
+<?php
+
+return [
+    'tripay' => [
+        // Virtual Account
+        [
+            'code' => 'PERMATAVA',
+            'name' => 'Permata Virtual Account',
+            'category' => 'Virtual Account',
+            'fee_flat' => 4250,
+            'fee_percent' => 0.0,
+        ],
+        [
+            'code' => 'BNIVA',
+            'name' => 'BNI Virtual Account',
+            'category' => 'Virtual Account',
+            'fee_flat' => 4250,
+            'fee_percent' => 0.0,
+        ],
+        [
+            'code' => 'BRIVA',
+            'name' => 'BRI Virtual Account',
+            'category' => 'Virtual Account',
+            'fee_flat' => 4250,
+            'fee_percent' => 0.0,
+        ],
+        [
+            'code' => 'MANDIRIVA',
+            'name' => 'Mandiri Virtual Account',
+            'category' => 'Virtual Account',
+            'fee_flat' => 4250,
+            'fee_percent' => 0.0,
+        ],
+        [
+            'code' => 'BCAVA',
+            'name' => 'BCA Virtual Account',
+            'category' => 'Virtual Account',
+            'fee_flat' => 5500,
+            'fee_percent' => 0.0,
+        ],
+        [
+            'code' => 'MUAMALATVA',
+            'name' => 'Muamalat Virtual Account',
+            'category' => 'Virtual Account',
+            'fee_flat' => 4250,
+            'fee_percent' => 0.0,
+        ],
+        [
+            'code' => 'CIMBVA',
+            'name' => 'CIMB Niaga Virtual Account',
+            'category' => 'Virtual Account',
+            'fee_flat' => 4250,
+            'fee_percent' => 0.0,
+        ],
+        [
+            'code' => 'BSIVA',
+            'name' => 'BSI Virtual Account',
+            'category' => 'Virtual Account',
+            'fee_flat' => 4250,
+            'fee_percent' => 0.0,
+        ],
+        [
+            'code' => 'OCBCVA',
+            'name' => 'OCBC NISP Virtual Account',
+            'category' => 'Virtual Account',
+            'fee_flat' => 4250,
+            'fee_percent' => 0.0,
+        ],
+        [
+            'code' => 'DANAMONVA',
+            'name' => 'Danamon Virtual Account',
+            'category' => 'Virtual Account',
+            'fee_flat' => 4250,
+            'fee_percent' => 0.0,
+        ],
+        [
+            'code' => 'OTHERBANKVA',
+            'name' => 'Virtual Account Bank Lain',
+            'category' => 'Virtual Account',
+            'fee_flat' => 4250,
+            'fee_percent' => 0.0,
+        ],
+
+        // Convenience Store
+        [
+            'code' => 'ALFAMART',
+            'name' => 'Alfamart',
+            'category' => 'Convenience Store',
+            'fee_flat' => 3500,
+            'fee_percent' => 0.0,
+        ],
+        [
+            'code' => 'INDOMARET',
+            'name' => 'Indomaret',
+            'category' => 'Convenience Store',
+            'fee_flat' => 3500,
+            'fee_percent' => 0.0,
+            'notes' => 'Tambahan Rp3.000 dibayarkan pelanggan di kasir.',
+        ],
+        [
+            'code' => 'ALFAMIDI',
+            'name' => 'Alfamidi',
+            'category' => 'Convenience Store',
+            'fee_flat' => 3500,
+            'fee_percent' => 0.0,
+        ],
+
+        // E-Wallet & QRIS
+        [
+            'code' => 'OVO',
+            'name' => 'OVO',
+            'category' => 'E-Wallet',
+            'fee_flat' => 0,
+            'fee_percent' => 3.0,
+            'min_fee' => 1000,
+        ],
+        [
+            'code' => 'DANA',
+            'name' => 'DANA',
+            'category' => 'E-Wallet',
+            'fee_flat' => 0,
+            'fee_percent' => 3.0,
+            'min_fee' => 1000,
+        ],
+        [
+            'code' => 'SHOPEEPAY',
+            'name' => 'ShopeePay (Direct)',
+            'category' => 'E-Wallet',
+            'fee_flat' => 0,
+            'fee_percent' => 3.0,
+            'min_fee' => 1000,
+        ],
+        [
+            'code' => 'QRIS',
+            'name' => 'QRIS by ShopeePay',
+            'category' => 'QRIS',
+            'fee_flat' => 750,
+            'fee_percent' => 0.7,
+        ],
+        [
+            'code' => 'QRISC',
+            'name' => 'QRIS (Customizable)',
+            'category' => 'QRIS',
+            'fee_flat' => 750,
+            'fee_percent' => 0.7,
+        ],
+        [
+            'code' => 'QRIS2',
+            'name' => 'QRIS',
+            'category' => 'QRIS',
+            'fee_flat' => 750,
+            'fee_percent' => 0.7,
+        ],
+        [
+            'code' => 'QRIS_SHOPEEPAY',
+            'name' => 'QRIS Custom by ShopeePay',
+            'category' => 'QRIS',
+            'fee_flat' => 750,
+            'fee_percent' => 0.7,
+        ],
+    ],
+];
