@@ -1,0 +1,307 @@
+/* Admin theme palette overrides */
+[data-app="admin"] {
+    --bg: #F5F8FC;
+    --surface: #FFFFFF;
+    --surface-2: #EEF2F9;
+    --text: #0F172A;
+    --text-2: #334155;
+    --text-3: #64748B;
+    --border: rgba(15, 23, 42, 0.12);
+    --accent: #38BDF8;
+    --accent-2: #5ECFFB;
+    --shadow-soft: 0 20px 48px rgba(15, 23, 42, 0.08);
+    --shadow-strong: 0 30px 64px rgba(15, 23, 42, 0.12);
+    --ring-color: color-mix(in oklab, var(--accent) 45%, transparent);
+}
+
+[data-app="admin"].dark {
+    --bg: #000000;
+    --surface: #0D1628;
+    --surface-2: #142036;
+    --text: #E5ECF8;
+    --text-2: #9AA7C2;
+    --text-3: #7C89A2;
+    --border: rgba(148, 163, 184, 0.26);
+    --accent: #38BDF8;
+    --accent-2: #5ECFFB;
+    --shadow-soft: 0 22px 58px rgba(2, 8, 23, 0.52);
+    --shadow-strong: 0 32px 82px rgba(2, 8, 23, 0.62);
+    --ring-color: color-mix(in oklab, var(--accent) 60%, transparent);
+}
+
+[data-app="admin"] body {
+    background-color: var(--bg) !important;
+    background-image: none !important;
+    color: var(--text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-app="admin"] .card,
+[data-app="admin"] [data-card],
+[data-app="admin"] .panel {
+    background: var(--surface);
+    border-color: var(--border);
+    box-shadow: var(--shadow-soft);
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+[data-app="admin"].dark .card,
+[data-app="admin"].dark [data-card],
+[data-app="admin"].dark .panel {
+    background: color-mix(in oklab, var(--surface) 86%, transparent);
+    border-color: var(--border);
+    box-shadow: var(--shadow-strong);
+}
+
+[data-app="admin"] .badge,
+[data-app="admin"] [data-chip],
+[data-app="admin"] .tag {
+    background: color-mix(in oklab, var(--surface-2) 72%, transparent);
+    border-color: color-mix(in oklab, var(--text-3) 28%, transparent);
+    color: var(--text-2);
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+[data-app="admin"].dark .badge,
+[data-app="admin"].dark [data-chip],
+[data-app="admin"].dark .tag {
+    background: color-mix(in oklab, var(--surface) 65%, transparent);
+    border-color: color-mix(in oklab, var(--text-3) 38%, transparent);
+    color: var(--text-2);
+}
+
+[data-app="admin"] .btn--primary,
+[data-app="admin"] [data-btn="primary"] {
+    background: var(--accent);
+    color: #011221;
+    border-color: transparent;
+    box-shadow: 0 16px 36px rgba(56, 189, 248, 0.18);
+    transition: background-color 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
+}
+
+[data-app="admin"] .btn--primary:hover,
+[data-app="admin"] [data-btn="primary"]:hover {
+    background: var(--accent-2);
+    box-shadow: 0 18px 42px rgba(94, 207, 251, 0.22);
+}
+
+[data-app="admin"] .input,
+[data-app="admin"] [data-input],
+[data-app="admin"] .form-control {
+    background: var(--surface);
+    border-color: var(--border);
+    color: var(--text);
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+[data-app="admin"] .input:focus,
+[data-app="admin"] [data-input]:focus,
+[data-app="admin"] .form-control:focus {
+    box-shadow: 0 0 0 var(--ring-w, 2px) var(--ring-color);
+    border-color: color-mix(in oklab, var(--accent) 45%, transparent);
+}
+
+[data-app="admin"] [data-metric-card] {
+    background: color-mix(in oklab, var(--surface) 92%, transparent) !important;
+    border-color: color-mix(in oklab, var(--border) 92%, transparent) !important;
+    box-shadow: var(--shadow-soft);
+    position: relative;
+}
+
+[data-app="admin"] [data-metric-card]::before {
+    content: "";
+    position: absolute;
+    inset-inline: 1.5rem;
+    top: 0.85rem;
+    height: 4px;
+    border-radius: 999px;
+    background: var(--metric-accent, var(--accent));
+    opacity: 0.9;
+    pointer-events: none;
+}
+
+[data-app="admin"] [data-metric-card][data-accent="sky"] {
+    --metric-accent: linear-gradient(90deg, #38BDF8, #0EA5E9);
+}
+
+[data-app="admin"] [data-metric-card][data-accent="emerald"] {
+    --metric-accent: linear-gradient(90deg, #34D399, #10B981);
+}
+
+[data-app="admin"] [data-metric-card][data-accent="purple"] {
+    --metric-accent: linear-gradient(90deg, #818CF8, #C084FC);
+}
+
+[data-app="admin"] [data-metric-card][data-accent="amber"] {
+    --metric-accent: linear-gradient(90deg, #FBBF24, #F97316);
+}
+
+[data-app="admin"] [data-metric-card] .dark\\:text-slate-100 {
+    color: var(--text) !important;
+}
+
+[data-app="admin"].dark [data-metric-card] {
+    background: color-mix(in oklab, var(--surface) 72%, transparent) !important;
+    border-color: color-mix(in oklab, var(--border) 95%, transparent) !important;
+    box-shadow: var(--shadow-strong);
+}
+
+[data-app="admin"].dark [data-metric-card]::before {
+    opacity: 0.7;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.22);
+}
+
+[data-app="admin"] .bg-white,
+[data-app="admin"] .bg-slate-50,
+[data-app="admin"] .bg-slate-100 {
+    background-color: var(--surface) !important;
+    color: inherit;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-app="admin"].dark .bg-white,
+[data-app="admin"].dark .bg-slate-50,
+[data-app="admin"].dark .bg-slate-100 {
+    background-color: color-mix(in oklab, var(--surface) 82%, transparent) !important;
+}
+
+[data-app="admin"] .text-slate-900,
+[data-app="admin"] .text-slate-800,
+[data-app="admin"] .text-slate-700 {
+    color: var(--text) !important;
+}
+
+[data-app="admin"] .text-slate-600,
+[data-app="admin"] .text-slate-500 {
+    color: var(--text-2) !important;
+}
+
+[data-app="admin"] .text-slate-400,
+[data-app="admin"] .text-slate-300,
+[data-app="admin"] .text-slate-200 {
+    color: var(--text-3) !important;
+}
+
+[data-app="admin"] .text-muted,
+[data-app="admin"] .text-xs,
+[data-app="admin"] .text-sm {
+    color: color-mix(in oklab, var(--text-3) 92%, transparent) !important;
+}
+
+[data-app="admin"] .border,
+[data-app="admin"] .border-slate-200,
+[data-app="admin"] .border-slate-300 {
+    border-color: var(--border) !important;
+    border-width: var(--border-w, 1px) !important;
+}
+
+[data-app="admin"].dark .border,
+[data-app="admin"].dark .border-slate-200,
+[data-app="admin"].dark .border-slate-300 {
+    border-color: var(--border) !important;
+}
+
+[data-app="admin"] .shadow,
+[data-app="admin"] .shadow-md,
+[data-app="admin"] .shadow-lg,
+[data-app="admin"] .shadow-xl {
+    box-shadow: var(--shadow-soft) !important;
+    transition: box-shadow 0.3s ease;
+}
+
+[data-app="admin"].dark .shadow,
+[data-app="admin"].dark .shadow-md,
+[data-app="admin"].dark .shadow-lg,
+[data-app="admin"].dark .shadow-xl {
+    box-shadow: var(--shadow-strong) !important;
+}
+
+[data-app="admin"] .ring-offset-white,
+[data-app="admin"] .ring-offset-slate-100 {
+    --tw-ring-offset-color: var(--surface);
+}
+
+[data-app="admin"].dark .ring-offset-white,
+[data-app="admin"].dark .ring-offset-slate-100 {
+    --tw-ring-offset-color: color-mix(in oklab, var(--surface) 70%, transparent);
+}
+
+[data-app="admin"] .ring-sky-500,
+[data-app="admin"] .ring-sky-600 {
+    --tw-ring-color: color-mix(in oklab, var(--accent) 65%, transparent);
+}
+
+[data-app="admin"].dark .ring-sky-500,
+[data-app="admin"].dark .ring-sky-600 {
+    --tw-ring-color: color-mix(in oklab, var(--accent) 55%, transparent);
+}
+
+[data-app="admin"] ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+[data-app="admin"] ::-webkit-scrollbar-track {
+    background: color-mix(in oklab, var(--surface-2) 75%, transparent);
+}
+
+[data-app="admin"] ::-webkit-scrollbar-thumb {
+    background: color-mix(in oklab, var(--text-3) 75%, transparent);
+    border-radius: 999px;
+    border: 2px solid color-mix(in oklab, var(--surface) 80%, transparent);
+}
+
+[data-app="admin"].dark ::-webkit-scrollbar-thumb {
+    background: color-mix(in oklab, var(--text-2) 70%, transparent);
+    border-color: color-mix(in oklab, var(--surface) 55%, transparent);
+}
+
+[data-app="admin"] .table thead {
+    background: color-mix(in oklab, var(--accent) 14%, transparent);
+    color: color-mix(in oklab, var(--text-2) 85%, transparent);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-app="admin"].dark .table thead {
+    background: color-mix(in oklab, var(--accent) 18%, transparent);
+    color: var(--text-2);
+}
+
+[data-app="admin"] .table tbody tr:hover {
+    background: color-mix(in oklab, var(--accent) 12%, transparent);
+    transition: background-color 0.3s ease;
+}
+
+[data-app="admin"].dark .table tbody tr:hover {
+    background: color-mix(in oklab, var(--accent) 16%, transparent);
+}
+
+[data-app="admin"] nav[role="navigation"] .flex.items-center.space-x-2 > span,
+[data-app="admin"] nav[role="navigation"] .flex.items-center.space-x-2 > button {
+    background: color-mix(in oklab, var(--surface) 92%, transparent);
+    border: var(--border-w, 1px) solid var(--border);
+    color: var(--text-2);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+[data-app="admin"].dark nav[role="navigation"] .flex.items-center.space-x-2 > span,
+[data-app="admin"].dark nav[role="navigation"] .flex.items-center.space-x-2 > button {
+    background: color-mix(in oklab, var(--surface) 75%, transparent);
+    border-color: var(--border);
+    color: var(--text);
+}
+
+[data-app="admin"] nav[role="navigation"] .flex.items-center.space-x-2 > button:hover {
+    color: var(--text);
+    border-color: color-mix(in oklab, var(--accent) 45%, transparent);
+}
+
+[data-app="admin"].dark :is(a, button, .card, [data-card], .panel, .table tbody tr, [data-hoverable], .list-group-item, .shadow, .rounded-3xl, .rounded-2xl, .rounded-xl, .rounded-lg) {
+    transition: box-shadow 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+[data-app="admin"].dark :is(a, button, .card, [data-card], .panel, .table tbody tr, [data-hoverable], .list-group-item, .shadow, .rounded-3xl, .rounded-2xl, .rounded-xl, .rounded-lg):hover {
+    box-shadow: 0 0 24px rgba(56, 189, 248, 0.42), 0 0 0 1px rgba(56, 189, 248, 0.32);
+    border-color: color-mix(in oklab, var(--accent) 68%, transparent) !important;
+    transform: translateY(-1px);
+}
